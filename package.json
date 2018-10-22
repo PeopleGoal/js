@@ -1,0 +1,28 @@
+{
+  "name": "@evermind/eslint-config-base",
+  "version": "1.0.0",
+  "description": "Base eslint rules that we use at Evermind Digital",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Evermind-Digital/js.git"
+  },
+  "keywords": [
+    "eslint",
+    "js",
+    "javascript",
+    "linting"
+  ],
+  "author": "James Mulholland",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Evermind-Digital/js/issues"
+  },
+  "homepage": "https://github.com/Evermind-Digital/js#readme",
+  "dependencies": {
+    "eslint-plugin-import": "^2.14.0"
+  }
+}
