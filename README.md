@@ -32,7 +32,7 @@
   ```javascript
   "scripts": {
     "eslint": "./node_modules/.bin/eslint ./src"
-    "lint": "node_modules/.bin/prettier-eslint --write --print-width 70 --tab-width 2 --trailing-comma "es5" --bracket-spacing --semi --single-quote \"src/**/*.{js,jsx}\""
+    "lint": "node_modules/.bin/prettier-eslint --write --print-width 70 --tab-width 2 --trailing-comma es5 --bracket-spacing --semi --single-quote \"src/**/*.{js,jsx}\""
 
   }
   ```
