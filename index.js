@@ -1,4 +1,6 @@
 /* eslint quote-props: 0 */
+import styleRules from './styleRules';
+
 module.exports = {
   parserOptions: {
     ecmaVersion: 2018,
@@ -1044,9 +1046,6 @@ module.exports = {
     // TODO add node. Not necessary for now as we don't use it yet.
     // https://eslint.org/docs/rules/#nodejs-and-commonjs
 
-    // TODO add stylist rules if prettier doesn't suffice
-    // https://eslint.org/docs/rules/#stylistic-issues
-
     /**
      * Require braces in arrow function body
      * https://eslint.org/docs/rules/arrow-body-style
@@ -1304,6 +1303,7 @@ module.exports = {
      * often in the middle of building things.
      */
     // 'import/prefer-default-export': 1,
+    ...styleRules,
   },
   // TODO add react rules
   // TODO add plugin-promise rules
