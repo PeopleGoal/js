@@ -27,13 +27,13 @@ module.exports = {
     'plugin:jsx-a11y/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
-    // ...[hasPackage('flow-bin') ? ['plugin:flowtype/recommended'] : []],
+    ...[hasPackage('flow-bin') ? ['plugin:flowtype/recommended'] : []],
   ],
   plugins: [
     'jsx-a11y',
     'import',
     'react',
-    // ...[hasPackage('flow-bin') ? ['flowtype'] : []],
+    ...[hasPackage('flow-bin') ? ['flowtype'] : []],
   ],
   rules: {
     ...styleRules,
