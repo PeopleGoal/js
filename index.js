@@ -1,13 +1,14 @@
+/* eslint quote-props: 0 */
 module.exports = {
   parserOptions: {
     ecmaVersion: 2018,
     ecmaFeatures: {
-      'jsx': true,
+      jsx: true,
     },
   },
   env: {
-    'es6': true,
-    'node': true,
+    es6: true,
+    node: true,
   },
   extends: [
     'plugin:jsx-a11y/recommended',
@@ -21,7 +22,7 @@ module.exports = {
   rules: {
     /**
      * Prevents for loops with unmeetable conditions
-     * 
+     *
      * Obviously a good thing to enforce.
      */
     'for-direction': 2,
@@ -164,8 +165,8 @@ module.exports = {
      * being used as a boolean explicit. However, other cases should
      * cause warnings as they are unecessary in certain contexts e.g.
      * in if statements.
-		*/
-		'no-extra-boolean-cast': 1,
+     */
+    'no-extra-boolean-cast': 1,
 
     /**
      * Disallow extra parentheses
@@ -175,10 +176,10 @@ module.exports = {
      * help make things more explicit (hence the rules below).
      */
     'no-extra-parens': ['error', 'all', {
-      'returnAssign': false,
-      'nestedBinaryExpressions': false,
-      'ignoreJSX': 'multi-line',
-      'enforceForArrowConditionals': false,
+      returnAssign: false,
+      nestedBinaryExpressions: false,
+      ignoreJSX: 'multi-line',
+      enforceForArrowConditionals: false,
     }],
 
     /**
@@ -195,346 +196,346 @@ module.exports = {
      *
      * Obviously bad
      */
-     'no-func-assign': 2,
+    'no-func-assign': 2,
 
     /**
-    * Disallow variable or function declarations in nested blocks
-    * https://eslint.org/docs/rules/no-inner-declarations
-    *
-    * Irrelevant with ES6
-    */
+     * Disallow variable or function declarations in nested blocks
+     * https://eslint.org/docs/rules/no-inner-declarations
+     *
+     * Irrelevant with ES6
+     */
     'no-inner-declarations': 0,
 
     /**
-      * Disallow invalid regex
-      * https://eslint.org/docs/rules/no-invalid-regexp
-      *
-      * Obvs bad
-      */
+     * Disallow invalid regex
+     * https://eslint.org/docs/rules/no-invalid-regexp
+     *
+     * Obvs bad
+     */
     'no-invalid-regexp': 0,
 
     /**
-      * Disallow irregular whitespace outside strings and comments
-      * https://eslint.org/docs/rules/no-irregular-whitespace
-      *
-      * Obvs bad
-      */
+     * Disallow irregular whitespace outside strings and comments
+     * https://eslint.org/docs/rules/no-irregular-whitespace
+     *
+     * Obvs bad
+     */
     'no-irregular-whitespace': 2,
 
     /**
-      * Disallows regex with symbols made of multiple code points
-      * https://eslint.org/docs/rules/no-misleading-character-class
-      *
-      * Having this on prevents some regex erros and is therefore
-      * a good idea.
-      */
-      'no-misleading-character-class': 2,
+     * Disallows regex with symbols made of multiple code points
+     * https://eslint.org/docs/rules/no-misleading-character-class
+     *
+     * Having this on prevents some regex erros and is therefore
+     * a good idea.
+     */
+    'no-misleading-character-class': 2,
 
-      /**
-      * Disallows calling global objects as functions
-      * https://eslint.org/docs/rules/no-obj-calls
-      *
-      * Some global objects should just be used as-is
-      */
+    /**
+     * Disallows calling global objects as functions
+     * https://eslint.org/docs/rules/no-obj-calls
+     *
+     * Some global objects should just be used as-is
+     */
     'no-obj-calls': 2,
 
     /**
-      * https://eslint.org/docs/rules/no-prototype-builtins
-      * 
-      * Unsure so off for now
-      */
+     * https://eslint.org/docs/rules/no-prototype-builtins
+     *
+     * Unsure so off for now
+     */
     'no-prototype-builtins': 0,
 
     /**
-      * Disallows multiple spaces in regex
-      * https://eslint.org/docs/rules/no-regex-spaces
-      *
-      * It's difficult to tell how many spaces there are
-      * when there's more than one. Use  {3} or similar
-      * instead
-      */
+     * Disallows multiple spaces in regex
+     * https://eslint.org/docs/rules/no-regex-spaces
+     *
+     * It's difficult to tell how many spaces there are
+     * when there's more than one. Use  {3} or similar
+     * instead
+     */
     'no-regex-spaces': 2,
 
     /**
-      * Disallows arrays with empty slots
-      * https://eslint.org/docs/rules/no-sparse-arrays
-      *
-      * We don't use sparse arrays
-      */
+     * Disallows arrays with empty slots
+     * https://eslint.org/docs/rules/no-sparse-arrays
+     *
+     * We don't use sparse arrays
+     */
     'no-sparse-arrays': 2,
 
     /**
-      * Ensure you use ` instead of ' or " when using
-      * ${variable} syntax
-      * https://eslint.org/docs/rules/no-template-curly-in-string
-      *
-      * Obviously good
-      */
+     * Ensure you use ` instead of ' or " when using
+     * ${variable} syntax
+     * https://eslint.org/docs/rules/no-template-curly-in-string
+     *
+     * Obviously good
+     */
     'no-template-curly-in-string': 2,
 
     /**
-      * Disallows confusing multiline expressions
-      * https://eslint.org/docs/rules/no-unexpected-multiline
-      *
-      * Obviously bad, even though we use semis
-      */
+     * Disallows confusing multiline expressions
+     * https://eslint.org/docs/rules/no-unexpected-multiline
+     *
+     * Obviously bad, even though we use semis
+     */
     'no-unexpected-multiline': 2,
 
     /**
-      * Disallow unreachable code
-      * https://eslint.org/docs/rules/no-unreachable
-      *
-      * Obvs bad
-      */
+     * Disallow unreachable code
+     * https://eslint.org/docs/rules/no-unreachable
+     *
+     * Obvs bad
+     */
     'no-unreachable': 2,
 
     /**
-      * Disallow control flow statements in finally blocks
-      * https://eslint.org/docs/rules/no-unsafe-finally
-      *
-      * Control flow statements cause unexpected behaviour
-      * in try and catch blocks.
-      */
+     * Disallow control flow statements in finally blocks
+     * https://eslint.org/docs/rules/no-unsafe-finally
+     *
+     * Control flow statements cause unexpected behaviour
+     * in try and catch blocks.
+     */
     'no-unsafe-finally': 2,
 
     /**
-      * Disallow negation of the left operand with in and
-      * instanceof operators
-      * https://eslint.org/docs/rules/no-unsafe-negation
-      *
-      * You probably didn't mean to do this and instead
-      * meant to add brackets
-      */
+     * Disallow negation of the left operand with in and
+     * instanceof operators
+     * https://eslint.org/docs/rules/no-unsafe-negation
+     *
+     * You probably didn't mean to do this and instead
+     * meant to add brackets
+     */
     'no-unsafe-negation': 1,
 
     /**
-      * Prevents race conditions from await and yield
-      * https://eslint.org/docs/rules/require-atomic-updates
-      *
-      * This causes bugs.
-      */
+     * Prevents race conditions from await and yield
+     * https://eslint.org/docs/rules/require-atomic-updates
+     *
+     * This causes bugs.
+     */
     'require-atomic-updates': 2,
 
     /**
-      * Require isNaN() instead of === NaN
-      * https://eslint.org/docs/rules/use-isnan
-      *
-      * NaN is not equal to anything, including itself. Use
-      * isNaN() instead
-      */
+     * Require isNaN() instead of === NaN
+     * https://eslint.org/docs/rules/use-isnan
+     *
+     * NaN is not equal to anything, including itself. Use
+     * isNaN() instead
+     */
     'use-isnan': 2,
 
     /**
-      * Enforces valid jsdoc
-      * https://eslint.org/docs/rules/valid-jsdoc
-      *
-      * We don't use JSDoc (yet)
-      */
+     * Enforces valid jsdoc
+     * https://eslint.org/docs/rules/valid-jsdoc
+     *
+     * We don't use JSDoc (yet)
+     */
     'valid-jsdoc': 0,
 
     /**
-      * Enforce typeof expressions against only certain strings
-      * https://eslint.org/docs/rules/valid-typeof
-      *
-      * We use flow so want this off
-      */
+     * Enforce typeof expressions against only certain strings
+     * https://eslint.org/docs/rules/valid-typeof
+     *
+     * We use flow so want this off
+     */
     'valid-typeof': 0,
 
     /**
-      * Disallows setters without getters
-      * https://eslint.org/docs/rules/accessor-pairs
-      *
-      * Why would you write without ever wanting to read?
-      */
+     * Disallows setters without getters
+     * https://eslint.org/docs/rules/accessor-pairs
+     *
+     * Why would you write without ever wanting to read?
+     */
     'accessor-pairs': 2,
 
     /**
-      * Enforce return statements in array method
-      * callbacks
-      * https://eslint.org/docs/rules/array-callback-return
-      *
-      * If you're using map, you want to return. If not, use
-      * forEach
-      */
+     * Enforce return statements in array method
+     * callbacks
+     * https://eslint.org/docs/rules/array-callback-return
+     *
+     * If you're using map, you want to return. If not, use
+     * forEach
+     */
     'array-callback-return': 2,
 
     /**
-      * Enforce variable use within the defined scope
-      * 'https://eslint.org/docs/rules/block-scoped-var'
-      *
-      * We don't use var
-      */
+     * Enforce variable use within the defined scope
+     * 'https://eslint.org/docs/rules/block-scoped-var'
+     *
+     * We don't use var
+     */
     'block-scoped-var': 0,
 
     /**
-      * Enforce class methods use this
-      * https://eslint.org/docs/rules/class-methods-use-this
-      *
-      * Make it static if you get this error.
-      */
+     * Enforce class methods use this
+     * https://eslint.org/docs/rules/class-methods-use-this
+     *
+     * Make it static if you get this error.
+     */
     'class-methods-use-this': 2,
 
     /**
-      * Prevents overly complex branching
-      * https://eslint.org/docs/rules/complexity
-      *
-      * I [heart] parsimony
-      */
-    'complexity': ['error', { 'max': 10 }],
+     * Prevents overly complex branching
+     * https://eslint.org/docs/rules/complexity
+     *
+     * I [heart] parsimony
+     */
+    complexity: ['error', { max: 10 }],
 
     /**
-      * Functions must always return a value, or never
-      * https://eslint.org/docs/rules/consistent-return
-      *
-      * You don't want inconsistent function returns.
-      */
+     * Functions must always return a value, or never
+     * https://eslint.org/docs/rules/consistent-return
+     *
+     * You don't want inconsistent function returns.
+     */
     'consistent-return': 2,
 
     /**
-      * Enforce consistent use of curly braces for blocks
-      * https://eslint.org/docs/rules/curly
-      *
-      * Single lines are okay with no braces,
-      * multi-lines are not.
-      */
-    'curly': ['error', 'multi-line'],
+     * Enforce consistent use of curly braces for blocks
+     * https://eslint.org/docs/rules/curly
+     *
+     * Single lines are okay with no braces,
+     * multi-lines are not.
+     */
+    curly: ['error', 'multi-line'],
 
     /**
-      * Require default case in switch statements
-      * https://eslint.org/docs/rules/default-case
-      *
-      * Ensures you account for errors
-      */
+     * Require default case in switch statements
+     * https://eslint.org/docs/rules/default-case
+     *
+     * Ensures you account for errors
+     */
     'default-case': 2,
 
     /**
-      * Consistent position of dot with newlines
-      * https://eslint.org/docs/rules/dot-location
-      *
-      * Consistency is key
-      */
+     * Consistent position of dot with newlines
+     * https://eslint.org/docs/rules/dot-location
+     *
+     * Consistency is key
+     */
     'dot-location': ['error', 'property'],
 
     /**
-      * Require dot notation instead of [] notation
-      * https://eslint.org/docs/rules/dot-notation
-      *
-      * dot notation is less error-prone, easier to read
-      * and more minimisable.
-      */
+     * Require dot notation instead of [] notation
+     * https://eslint.org/docs/rules/dot-notation
+     *
+     * dot notation is less error-prone, easier to read
+     * and more minimisable.
+     */
     'dot-notation': 2,
 
     /**
-      * Enforce === and !== instead of ==
-      * https://eslint.org/docs/rules/eqeqeq
-      * 
-      * Bad things might happen if you use ==
-      */
+     * Enforce === and !== instead of ==
+     * https://eslint.org/docs/rules/eqeqeq
+     *
+     * Bad things might happen if you use ==
+     */
     'eqeqeq': 2,
-    
+
     /**
-      * Prevents looping over all properties with for in
-      * loops
-      * https://eslint.org/docs/rules/guard-for-in
-      *
-      * It's not that big a deal to loop over properties 
-      * inherited from the prototype
-      */
+     * Prevents looping over all properties with for in
+     * loops
+     * https://eslint.org/docs/rules/guard-for-in
+     *
+     * It's not that big a deal to loop over properties
+     * inherited from the prototype
+     */
     'guard-for-in': 0,
 
     /**
-      * Disallows more than 1 class per file
-      * https://eslint.org/docs/rules/max-classes-per-file
-      *
-      * 1 class per file is a good practice but we won't
-      * scream at you if you don't refactor straight away
-      */
+     * Disallows more than 1 class per file
+     * https://eslint.org/docs/rules/max-classes-per-file
+     *
+     * 1 class per file is a good practice but we won't
+     * scream at you if you don't refactor straight away
+     */
     'max-classes-per-file': ['warn', 1],
 
     /**
-      * Disallows alert, confirm and prompt
-      * https://eslint.org/docs/rules/no-alert
-      *
-      * This is fine if you're just getting things rolling
-      * but you shouldn't have this in production
-      */
+     * Disallows alert, confirm and prompt
+     * https://eslint.org/docs/rules/no-alert
+     *
+     * This is fine if you're just getting things rolling
+     * but you shouldn't have this in production
+     */
     'no-alert': 1,
 
     /**
-      * Disallow Use of caller/callee
-      * https://eslint.org/docs/rules/no-caller
-      *
-      * This code is deprecated
-      */
+     * Disallow Use of caller/callee
+     * https://eslint.org/docs/rules/no-caller
+     *
+     * This code is deprecated
+     */
     'no-caller': 2,
 
     /**
-      * Disallows declaring variables in switch statements
-      * https://eslint.org/docs/rules/no-case-declarations
-      *
-      * Declarations in case/default clauses are available
-      * throughout the entire switch statement.
-      */
+     * Disallows declaring variables in switch statements
+     * https://eslint.org/docs/rules/no-case-declarations
+     *
+     * Declarations in case/default clauses are available
+     * throughout the entire switch statement.
+     */
     'no-case-declarations': 2,
 
     /**
-      * Disallows regex that looks like division
-      * https://eslint.org/docs/rules/no-div-regex
-      *
-      * Avoids confusing regex with division operator.
-      * Prefer /\=foo/ syntax to /foo/
-      */
+     * Disallows regex that looks like division
+     * https://eslint.org/docs/rules/no-div-regex
+     *
+     * Avoids confusing regex with division operator.
+     * Prefer /\=foo/ syntax to /foo/
+     */
     'no-div-regex': 1,
 
     /**
-      * Disallow return statements before else
-      * https://eslint.org/docs/rules/no-else-return
-      *
-      * Removes excess code.
-      */
-      'no-else-return': 2,
+     * Disallow return statements before else
+     * https://eslint.org/docs/rules/no-else-return
+     *
+     * Removes excess code.
+     */
+    'no-else-return': 2,
 
     /**
-      * Disallows empty functions
-      * https://eslint.org/docs/rules/no-empty-function
-      *
-      * Functions should do something. Comments are allowed
-      * to ensure you will come back to implement later
-      */
+     * Disallows empty functions
+     * https://eslint.org/docs/rules/no-empty-function
+     *
+     * Functions should do something. Comments are allowed
+     * to ensure you will come back to implement later
+     */
     'no-empty-function': 1,
-    
+
     /**
-      * Disallow destructuring with no effect
-      * https://eslint.org/docs/rules/no-empty-pattern
-      *
-      * Destructuring should do something.
-      */
+     * Disallow destructuring with no effect
+     * https://eslint.org/docs/rules/no-empty-pattern
+     *
+     * Destructuring should do something.
+     */
     'no-empty-pattern': 2,
 
     /**
-      * Disallows comparisons to null with == or !=
-      * https://eslint.org/docs/rules/no-eq-null
-      *
-      * Ensures only null is matched, not undefined
-      */
+     * Disallows comparisons to null with == or !=
+     * https://eslint.org/docs/rules/no-eq-null
+     *
+     * Ensures only null is matched, not undefined
+     */
     'no-eq-null': 2,
 
     /**
-      * Disallow eval()
-      * https://eslint.org/docs/rules/no-eval
-      *
-      * Prevents injection attacks
-      */
+     * Disallow eval()
+     * https://eslint.org/docs/rules/no-eval
+     *
+     * Prevents injection attacks
+     */
     'no-eval': 2,
 
     /**
-      * Disallow extending native types
-      * https://eslint.org/docs/rules/no-extend-native
-      *
-      * This might cause problems in other parts of the
-      * code which have assumed things about native
-      * types
-      */
+     * Disallow extending native types
+     * https://eslint.org/docs/rules/no-extend-native
+     *
+     * This might cause problems in other parts of the
+     * code which have assumed things about native
+     * types
+     */
     'no-extend-native': 2,
 
     /**
@@ -569,7 +570,7 @@ module.exports = {
      * Aesthetics
      */
     'no-floating-decimal': 2,
-    
+
     /**
      * Prevent assignment to global variables
      * https://eslint.org/docs/rules/no-global-assign
@@ -585,7 +586,7 @@ module.exports = {
      * Clear code is good code. Boolean conversions are
      * common enough to be understood.
      */
-    'no-implicit-coercion': ['error', { 'boolean': false }],
+    'no-implicit-coercion': ['error', { boolean: false }],
 
     /**
      * Disallow declarations in the global scope
@@ -598,7 +599,7 @@ module.exports = {
     /**
      * No implicit eval()
      * https://eslint.org/docs/rules/no-implied-eval
-     * 
+     *
      * This prevents overly implicit code
      */
     'no-implied-eval': 2,
@@ -691,7 +692,7 @@ module.exports = {
      * New is unnecessary here.
      */
     'no-new-wrappers': 2,
-    
+
     /**
      * Disallow numbers beginning with 0
      * https://eslint.org/docs/rules/no-octal
@@ -771,7 +772,7 @@ module.exports = {
     /**
      * Disallow self comparison
      * https://eslint.org/docs/rules/no-self-compare
-     * 
+     *
      * Obvs bad
      */
     'no-self-compare': 2,
@@ -808,7 +809,7 @@ module.exports = {
      * with whilst writing code.
      */
     'no-unused-expressions': 2,
-  
+
     /**
      * Disallow Unused Labels
      * https://eslint.org/docs/rules/no-unused-labels
@@ -870,7 +871,7 @@ module.exports = {
     /**
      * Disallow `with`
      * https://eslint.org/docs/rules/no-with
-     * 
+     *
      * Causes scoping issues
      */
     'no-with': 2,
@@ -912,7 +913,7 @@ module.exports = {
      * their containing scope
      * https://eslint.org/docs/rules/vars-on-top
      *
-     * We don't use var so ignore 
+     * We don't use var so ignore
      */
     'vars-on-top': 0,
 
@@ -1034,7 +1035,7 @@ module.exports = {
      * Disallows use of vars and funcs before definition
      * through hoisting.
      *
-     * 
+     *
      * If your variables and functions are well named,
      * hoisting is okay and can lead to cleaner code.
      */
@@ -1165,7 +1166,7 @@ module.exports = {
      * Prevents renaming to the same name
      * https://eslint.org/docs/rules/no-useless-rename
      *
-     * Chocolate teapot 
+     * Chocolate teapot
      */
     'no-useless-rename': 2,
 
@@ -1179,12 +1180,12 @@ module.exports = {
 
     /**
      * Require object literal shorthand syntax
-     * https://eslint.org/docs/rules/object-shorthand
-		 *
-		 * Cleaner is better. This might be new or confusing,
+     * https://eslint.org/docs/rules/object-
+     *
+     * Cleaner is better. This might be new or confusing,
      * but it's a good excuse to brush up on new JS.
-		 */
-		'object-shorthand': 2,
+     */
+    'object-shorthand': 2,
 
     /**
      * Prefer arrow funcs in callbacks
@@ -1218,7 +1219,7 @@ module.exports = {
      * We don't write code like this (yet)
      * https://eslint.org/docs/rules/prefer-numeric-literals
      */
-		'prefer-numeric-literals': 0,
+    'prefer-numeric-literals': 0,
 
     /**
      * Prefer rest over args
@@ -1260,12 +1261,12 @@ module.exports = {
      */
     'rest-spread-spacing': ['error', 'never'],
 
-		/**
-		 * Sorts imports alphabetically
+    /**
+     * Sorts imports alphabetically
      * https://eslint.org/docs/rules/sort-imports
      *
      * Makes finding modules easier. Consistency.
-		 */
+     */
     'sort-imports': ['error', {
       'ignoreCase': true,
       'ignoreMemberSort': false, // sort within individual imports
@@ -1301,7 +1302,7 @@ module.exports = {
     /**
      * You _should_ follow this convention, but you're
      * often in the middle of building things.
-    */
+     */
     // 'import/prefer-default-export': 1,
   },
   // TODO add react rules
@@ -1311,4 +1312,3 @@ module.exports = {
   // TODO add eslint-plugin-comments
   // TODO MobX?
 };
-
