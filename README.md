@@ -14,9 +14,13 @@
 * If something should never be in your code, it is an error, regardless of the severity of the issue.
 * If something probably shouldn't be in your code, but might just require extra oversight from the programmer, the rule should produce a warning. The programmer should then insert a comment to remove the error, or adjust the code accordingly. https://eslint.org/docs/user-guide/configuring#using-configuration-comments
 * You should add rules here where possible, not in individual projects.
-* You might also want to check out [stylelint](https://stylelint.io/) for CSS linting.
+* You might also want to check out [stylelint](https://stylelint.io/) and https://github.com/hugomrdias/prettier-stylelint for CSS linting.
+* We're not using `eslint-config-prettier` as we want to override some rules with eslint manually.
+* We're not using `eslint-plugin-prettier` as there may be conflicts due to the point above. eslint and prettier differing will mean there will always be linting errors.
+* This installs Prettier for you (but not eslint).
 
 ## Usage
+* Make sure you have eslint installed and initialised: `npm --save-dev i eslint`
 * You should extend this in your `eslintrc.js`.
   ```javascript
   {
@@ -24,10 +28,12 @@
   }
   ```
   * See https://eslint.org/docs/developer-guide/shareable-configs for details.
-* Add the following to your package.json scripts:
+* Add the following to your package.json scripts (adjusting for the appropriate src folder accordingly):
   ```javascript
   "scripts": {
-    "lint": "./node_modules/.bin/eslint ./src" // or whatever your src folder is
+    "eslint": "./node_modules/.bin/eslint ./src"
+    "lint": "node_modules/.bin/prettier-eslint --write --print-width 70 --tab-width 2 --trailing-comma "es5" --bracket-spacing --semi --single-quote \"src/**/*.{js,jsx}\""
+
   }
   ```
 * eslint is for js linting, prettier is for formatting. Make sure you setup both.
