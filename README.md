@@ -47,7 +47,18 @@
 * Setup your editor as necesary: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint, https://github.com/w0rp/ale
 
 ### Flow
-* If you have flow installed, you will also need to run `yarn add --dev eslint-plugin-flowtype`. This package will take care of the rest of flow-related linting for you.
+* If you have flow installed, you will also need to run `yarn add --dev eslint-plugin-flowtype`.
+* You will then need to add the following to your .eslintrc.js
+  ```javascript
+  {
+    'extends': [
+      'plugin:flowtype/recommended',  
+    ],
+    'plugins': [
+      'flowtype', 
+    ],
+  }
+  ```
 
 ## Updating
 1. Make appropriate changes in repo
