@@ -4,7 +4,9 @@
   "description": "Base eslint rules that we use at Evermind Digital",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "build": "./node_modules/.bin/babel src -d lib",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -33,5 +35,10 @@
   },
   "peerDependencies": {
     "eslint": ">= 3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0"
   }
 }

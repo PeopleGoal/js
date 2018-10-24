@@ -1,5 +1,5 @@
 /* eslint quote-props: 0 */
-const styleRules = require('./styleRules');
+import styleRules from './styleRules';
 
 function hasPackage(name) {
   try {
@@ -34,6 +34,7 @@ module.exports = {
     'import',
   ],
   rules: {
+    ...styleRules,
     /**
      * Prevents for loops with unmeetable conditions
      *
@@ -1316,7 +1317,6 @@ module.exports = {
      * often in the middle of building things.
      */
     // 'import/prefer-default-export': 1,
-    ...styleRules,
   },
   // TODO add react rules
   // TODO add plugin-promise rules
