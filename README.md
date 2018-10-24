@@ -35,4 +35,4 @@
 ## Updating
 1. Make appropriate changes in repo
 2. `npm version <update_type>` (where update type is one of `patch`, `minor`, or `major`)
-3. `npm publish`
+3. `npm publish --access public`
