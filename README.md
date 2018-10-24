@@ -12,7 +12,7 @@
 
 ## Notes
 * If something should never be in your code, it is an error, regardless of the severity of the issue.
-* If something probably shouldn't be in your code, but might just require extra oversight from the programmer, the rule should produce a warning. The programmer should then insert a comment to remove the error, or adjust the code accordingly.
+* If something probably shouldn't be in your code, but might just require extra oversight from the programmer, the rule should produce a warning. The programmer should then insert a comment to remove the error, or adjust the code accordingly. https://eslint.org/docs/user-guide/configuring#using-configuration-comments
 * You should add rules here where possible, not projects.
 
 ## Usage
@@ -23,7 +23,14 @@
   }
   ```
   * See https://eslint.org/docs/developer-guide/shareable-configs for details.
+* Add the following to your package.json scripts:
+  ```javascript
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint ./src" // or whatever your src folder is
+  }
+  ```
 * eslint is for js linting, prettier is for formatting. Make sure you setup both.
+* Setup your editor as necesary: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint, https://github.com/w0rp/ale
 
 ## Updating
 1. Make appropriate changes in repo

@@ -9,8 +9,15 @@ module.exports = {
     'es6': true,
     'node': true,
   },
-  extends: ['plugin:jsx-ally/recommended'],
-  plugins: ['jsx-ally'],
+  extends: [
+    'plugin:jsx-a11y/recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+  ],
+  plugins: [
+    'jsx-a11y',
+    'import',
+  ],
   rules: {
     /**
      * Prevents for loops with unmeetable conditions
@@ -43,7 +50,7 @@ module.exports = {
      * You should use await on Promise.all instead of
      * on promises within a loop. See link for details
      */
-    'no-await-loop': 2,
+    'no-await-in-loop': 2,
 
     /**
      * Disallows comparing against -0
@@ -60,7 +67,7 @@ module.exports = {
      *
      * It's hard to tell whether you meant = or ===
      */
-    'no-cond-assignment': 2,
+    'no-cond-assign': 2,
 
     /**
      * Bans console logs
@@ -167,7 +174,7 @@ module.exports = {
      * Extra parents are generally a bad idea, however, they often
      * help make things more explicit (hence the rules below).
      */
-    'no-extra-parens': ['all', {
+    'no-extra-parens': ['error', 'all', {
       'returnAssign': false,
       'nestedBinaryExpressions': false,
       'ignoreJSX': 'multi-line',
@@ -323,7 +330,7 @@ module.exports = {
       *
       * We don't use JSDoc (yet)
       */
-    'valid-jsdoc': 1,
+    'valid-jsdoc': 0,
 
     /**
       * Enforce typeof expressions against only certain strings
@@ -442,7 +449,7 @@ module.exports = {
       * 1 class per file is a good practice but we won't
       * scream at you if you don't refactor straight away
       */
-    'max-classes-per-file': ['warning', 1],
+    'max-classes-per-file': ['warn', 1],
 
     /**
       * Disallows alert, confirm and prompt
@@ -494,7 +501,7 @@ module.exports = {
       * Functions should do something. Comments are allowed
       * to ensure you will come back to implement later
       */
-    'no-empty-func': 1,
+    'no-empty-function': 1,
     
     /**
       * Disallow destructuring with no effect
@@ -578,7 +585,7 @@ module.exports = {
      * Clear code is good code. Boolean conversions are
      * common enough to be understood.
      */
-    'no-implicit-conversion': ['error', { 'boolean': false }],
+    'no-implicit-coercion': ['error', { 'boolean': false }],
 
     /**
      * Disallow declarations in the global scope
@@ -603,7 +610,7 @@ module.exports = {
      * It's useful to be warned about where you might be
      * using this incorrectly.
      */
-    'no-invalid-this': 2,
+    'no-invalid-this': 1,
 
     /**
      * Disallow iterator
@@ -699,7 +706,7 @@ module.exports = {
      *
      * You should use unicode escape sequences instead
      */
-    'octal-escape': 2,
+    'no-octal-escape': 2,
 
     /**
      * Disallow reassignment of function params
@@ -751,7 +758,7 @@ module.exports = {
      *
      * Same as banning eval.
      */
-    'no-scrip-url': 2,
+    'no-script-url': 2,
 
     /**
      * Disallow assigning to itself
@@ -824,7 +831,7 @@ module.exports = {
      *
      * Just write as one string literal
      */
-    'https://eslint.org/docs/rules/no-useless-concat': 2,
+    'no-useless-concat': 2,
 
     /**
      * Don't escape unecessarily
@@ -1127,7 +1134,7 @@ module.exports = {
      *
      * Lodash > ramda > undercsore
      */
-    'no-restricrted-imports': ['error', 'underscore', 'ramda'],
+    'no-restricted-imports': ['error', 'underscore', 'ramda'],
 
     /**
      * Enforce super before this
@@ -1290,11 +1297,12 @@ module.exports = {
     'yield-star-spacing': ['error', 'both'],
 
     // TODO add import rules
+    // https://www.npmjs.com/package/eslint-plugin-import
     /**
      * You _should_ follow this convention, but you're
      * often in the middle of building things.
     */
-    'import/prefer-default-export': 1,
+    // 'import/prefer-default-export': 1,
   },
   // TODO add react rules
   // TODO add plugin-promise rules
