@@ -1,7 +1,3 @@
-const flowRules = {
-  // TODO add flow rules
-};
-
 module.exports = {
   extends: ['plugin:jsx-ally/recommended'],
   plugins: ['jsx-ally'],
@@ -834,6 +830,7 @@ module.exports = {
      *
      * Obvs bad
      */
+    'no-useless-return': 2,
 
     /**
      * Disallow void
@@ -929,20 +926,366 @@ module.exports = {
      */
     'strict': 2,
 
-    // TODO continue from strict mode on eslint.org/docs/rules
+    /**
+     * Disallow `let bar;`
+     * https://eslint.org/docs/rules/init-declarations
+     *
+     * This aesthetically offends me but will require too
+     * much fixing to generate an error. Just be careful
+     */
+    'init-declarations': ['warn', 'always'],
+
+    /**
+     * https://eslint.org/docs/rules/no-delete-var
+     * Covered by strict mode
+     */
+
+    /**
+     * Disallow lables that share names with variables
+     * https://eslint.org/docs/rules/no-label-var
+     *
+     * We don't like labels generally
+     */
+    'no-label-var': 2,
+
+    /**
+     * Disallow certiain global variables
+     * https://eslint.org/docs/rules/no-restricted-globals
+     *
+     * Bad practice to use global variables anyway.
+     */
+    'no-restricted-globals': 0,
+
+    /**
+     * Disallow variables in innner blocks with the same
+     * name as variables in outer block.
+     * https://eslint.org/docs/rules/no-shadow
+     *
+     * Obvs bad. 2 things with the same name is confusing
+    */
+    'no-shadow': 2,
+
+    /**
+     * Disallow certain variable names that are already in
+     * use e.g. undefined
+     * https://eslint.org/docs/rules/no-shadow-restricted-names
+     *
+     * Obs bad
+     */
+    'no-shadow-restricted-names': 2,
+
+    /**
+     * Disallow undeclared variables
+     * https://eslint.org/docs/rules/no-undef
+     *
+     * Helps locate ref errors and accidental implicit globals
+     */
+    'no-undef': 2,
+
+    /**
+     * Disallow initializing to undefined
+     * https://eslint.org/docs/rules/no-undef-init
+     *
+     * var foo = undefined;
+     * can be simplified to:
+     * var foo;
+     *
+     * If you mean to be explicit about this value being
+     * empty, use null instead.
+     *
+     * See no-init-declarations also
+     */
+    'no-undef-init': 2,
+
+    /**
+     * Disallows the use of undefined
+     * https://eslint.org/docs/rules/no-undefined
+     *
+     * Sometimes undefined is ok. We don't re-assign it.
+     */
+    'no-undefined': 0,
+
+    /**
+     * Disallows unused vars
+     * https://eslint.org/docs/rules/no-unused-vars
+     *
+     * vars are bad. Unused vars are worse.
+     */
+    'no-unused-vars': 2,
+
+    /**
+     * Disallows use of vars and funcs before definition
+     * through hoisting.
+     *
+     * 
+     * If your variables and functions are well named,
+     * hoisting is okay and can lead to cleaner code.
+     */
+    'no-use-before-define': 0,
 
     // TODO add node. Not necessary for now as we don't use it yet.
+    // https://eslint.org/docs/rules/#nodejs-and-commonjs
 
+    // TODO add stylist rules if prettier doesn't suffice
+    // https://eslint.org/docs/rules/#stylistic-issues
+
+    /**
+     * Require braces in arrow function body
+     * https://eslint.org/docs/rules/arrow-body-style
+     *
+     * Cleaner is better, but sometimes you need clarity in
+     * multi-line funcs.
+     */
+    'arrow-body-style': ['error', 'as-needed'],
+
+    /**
+     * Require parens in arrow func args
+     * https://eslint.org/docs/rules/arrow-parens
+     *
+     * Cleaner is better, but dont' make mistaeks
+     */
+    'arrow-parens': ['error', 'as-needed', { 'requireForBlockBody': false }],
+
+    /**
+     * Verify calls of super() in constructors
+     * https://eslint.org/docs/rules/constructor-super
+     *
+     * Generally a good reminder to have.
+     */
+    'constructor-super': 2,
+
+    /**
+     * Enforce consistent spacing around * in generators
+     * https://eslint.org/docs/rules/generator-star-spacing
+     *
+     * Aribitrary, but consistent.
+     */
+    'generator-star-spacing': ['error', 'both'],
+
+    /**
+     * Disallow reassigning class declarations
+     * https://eslint.org/docs/rules/no-class-assign
+     *
+     * If you're doing this, it's a mistake.
+     */
+    'no-class-assign': 2,
+
+    /**
+     * Clarifies whether you meant => or <=
+     * https://eslint.org/docs/rules/no-confusing-arrow
+     *
+     * Ligatures in your fonts make this a very unlikely
+     * problem
+     */
+    'no-confusing-arrow': 0,
+
+    /**
+     * Disallow reassigning constants
+     * https://eslint.org/docs/rules/no-const-assign
+     *
+     * Consts are constant!
+     */
+    'no-const-assign': 2,
+
+    /**
+     * Disallow duplicate names in classe members
+     * https://eslint.org/docs/rules/no-dupe-class-members
+     *
+     * Obvs bad
+     */
+    'no-dupe-class-members': 2,
+
+    /**
+     * Enforce all imports from same module in one line
+     * https://eslint.org/docs/rules/no-duplicate-imports
+     *
+     * Simple is better.
+     */
+    'no-duplicate-imports': 2,
+
+    /**
+     * Disallow new wiht Symbol
+     * https://eslint.org/docs/rules/no-new-symbol
+     *
+     * Symbol should be called as a function.
+     */
+    'no-new-symbol': 2,
+
+    /**
+     * Disallow specfiic imports
+     * https://eslint.org/docs/rules/no-restricted-imports
+     *
+     * Lodash > ramda > undercsore
+     */
+    'no-restricrted-imports': ['error', 'underscore', 'ramda'],
+
+    /**
+     * Enforce super before this
+     * https://eslint.org/docs/rules/no-this-before-super
+     *
+     * Prevents reference erros
+     */
+    'no-this-before-super': 2,
+
+    /**
+     * Disallow unecessary computed properties
+     * https://eslint.org/docs/rules/no-useless-computed-key
+     *
+     * Simple is better
+     */
+    'no-useless-computed-key': 2,
+
+    /**
+     * Disallows useless constructors
+     * https://eslint.org/docs/rules/no-useless-constructor
+     *
+     * ES6 gives default constructors so you don't always
+     * need to specify one.
+     */
+    'no-useless-constructor': 2,
+
+    /**
+     * Prevents renaming to the same name
+     * https://eslint.org/docs/rules/no-useless-rename
+     *
+     * Chocolate teapot 
+     */
+    'no-useless-rename': 2,
+
+    /**
+     * No vars
+     * https://eslint.org/docs/rules/no-var
+     *
+     * What is this, 2005?
+     */
+    'no-var': 2,
+
+    /**
+     * Require object literal shorthand syntax
+     * https://eslint.org/docs/rules/object-shorthand
+		 *
+		 * Cleaner is better. This might be new or confusing,
+     * but it's a good excuse to brush up on new JS.
+		 */
+		'object-shorthand': 2,
+
+    /**
+     * Prefer arrow funcs in callbacks
+     * https://eslint.org/docs/rules/prefer-arrow-callback
+     *
+     * We maintain an aesthetic preference of arrows
+     */
+    'prefer-arrow-callback': 2,
+
+    /**
+     * Prefer const when not re-assigning
+     * https://eslint.org/docs/rules/prefer-const
+     *
+     * Immutability is a good concept to adhere to where
+     * possible
+     */
+    'prefer-const': 2,
+
+    /**
+     * Prefer destructuring
+     * https://eslint.org/docs/rules/prefer-destructuring
+     *
+     * Always enforcing this can sometimes add an extra
+     * line of unecessary code. However, destructuring is
+     * usually a good thing. Additionally, accessing large
+     * indices is difficult with destructuring.
+     */
+    'prefer-destructuring': 0,
+
+    /**
+     * We don't write code like this (yet)
+     * https://eslint.org/docs/rules/prefer-numeric-literals
+     */
+		'prefer-numeric-literals': 0,
+
+    /**
+     * Prefer rest over args
+     * https://eslint.org/docs/rules/prefer-rest-params
+     *
+     * Keep it clean and ES2015
+     */
+    'prefer-rest-params': 2,
+
+    /**
+     * Prefer spread over .apply()
+     * https://eslint.org/docs/rules/prefer-spread
+     *
+     * Keep it clean and ES2015
+     */
+    'prefer-spread': 2,
+
+    /**
+     * Require template literals instead of string concat
+     * https://eslint.org/docs/rules/prefer-template
+     *
+     * Keep it clean and ES2015
+     */
+    'prefer-template': 2,
+
+    /**
+     * Require generators to contain yield
+     * https://eslint.org/docs/rules/require-yield
+     *
+     * Why are you generating if you aren't yielding?
+     */
+    'require-yield': 2,
+
+    /**
+     * Consistent spacing for rest and spread
+     * https://eslint.org/docs/rules/rest-spread-spacing
+     *
+     * Aesthetic judgement. Consistency.
+     */
+    'rest-spread-spacing': ['error', 'never'],
+
+		/**
+		 * Sorts imports alphabetically
+     * https://eslint.org/docs/rules/sort-imports
+     *
+     * Makes finding modules easier. Consistency.
+		 */
+    'sort-imports': ['error', {
+      'ignoreCase': true,
+      'ignoreMemberSort': false, // sort within individual imports
+      'memberSyntaxSortOrder': ['none', 'all', 'single', 'multiple'],
+    }],
+
+    /**
+     * Require a description to be passed to Symbol()
+     * https://eslint.org/docs/rules/symbol-description
+     *
+     * Makes debugging easier
+     */
+    'symbol-description': 2,
+
+    /**
+     * Consistent spacing around template variables
+     * https://eslint.org/docs/rules/template-curly-spacing
+     *
+     * Consistency and compactness
+     */
+    'template-curly-spacing': ['error', 'never'],
+
+    /**
+     * Consistent spacing on yield *
+     * https://eslint.org/docs/rules/yield-star-spacing
+     *
+     * Consistency. Matches generator star spacing.
+     */
+    'yield-star-spacing': ['error', 'both'],
+
+    // TODO add import rules
     /**
      * You _should_ follow this convention, but you're
      * often in the middle of building things.
     */
     'import/prefer-default-export': 1,
-
-    // TODO add conditional for flow activation
-    ...flowRules,
   },
-  // TODO add import rules
   // TODO add react rules
   // TODO add plugin-promise rules
   // TODO add plugin-lodash rules
