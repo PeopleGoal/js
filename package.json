@@ -12,6 +12,7 @@
   },
   "keywords": [
     "eslint",
+    "eslintconfig",
     "js",
     "javascript",
     "linting",
@@ -25,5 +26,8 @@
   "homepage": "https://github.com/Evermind-Digital/js#readme",
   "dependencies": {
     "eslint-plugin-import": "^2.14.0"
+  },
+  "peerDependencies": {
+    "eslint": ">= 3"
   }
 }
