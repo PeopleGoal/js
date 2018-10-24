@@ -1,4 +1,14 @@
 module.exports = {
+  parserOptions: {
+    ecmaVersion: 2018,
+    ecmaFeatures: {
+      'jsx': true,
+    },
+  },
+  env: {
+    'es6': true,
+    'node': true,
+  },
   extends: ['plugin:jsx-ally/recommended'],
   plugins: ['jsx-ally'],
   rules: {

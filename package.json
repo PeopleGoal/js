@@ -14,7 +14,8 @@
     "eslint",
     "js",
     "javascript",
-    "linting"
+    "linting",
+    "es2015"
   ],
   "author": "James Mulholland",
   "license": "MIT",
