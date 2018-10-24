@@ -23,13 +23,13 @@ module.exports = {
     node: true,
   },
   extends: [
-    ...[hasPackage('flow-bin') ? ['plugin:flowtype/recommended'] : []],
+    // ...[hasPackage('flow-bin') ? ['plugin:flowtype/recommended'] : []],
     'plugin:jsx-a11y/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
   ],
   plugins: [
-    ...[hasPackage('flow-bin') ? ['flowtype'] : []],
+    // ...[hasPackage('flow-bin') ? ['flowtype'] : []],
     'jsx-a11y',
     'import',
   ],
