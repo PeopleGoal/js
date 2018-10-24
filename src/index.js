@@ -33,6 +33,7 @@ module.exports = {
     // ...[hasPackage('flow-bin') ? ['flowtype'] : []],
     'jsx-a11y',
     'import',
+    'react',
   ],
   rules: {
     ...styleRules,
