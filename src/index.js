@@ -1,6 +1,6 @@
 /* eslint quote-props: 0 */
 import styleRules from './styleRules';
-
+/*
 function hasPackage(name) {
   try {
     require.resolve(name);
@@ -10,6 +10,7 @@ function hasPackage(name) {
     return false;
   }
 }
+*/
 
 module.exports = {
   parserOptions: {
@@ -24,13 +25,13 @@ module.exports = {
     node: true,
   },
   extends: [
-    ...[hasPackage('flow-bin') ? ['plugin:flowtype/recommended'] : []],
+    // ...[hasPackage('flow-bin') ? ['plugin:flowtype/recommended'] : []],
     'plugin:jsx-a11y/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
   ],
   plugins: [
-    ...[hasPackage('flow-bin') ? ['flowtype'] : []],
+    // ...[hasPackage('flow-bin') ? ['flowtype'] : []],
     'jsx-a11y',
     'import',
     'react',
