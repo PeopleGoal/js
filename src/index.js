@@ -24,16 +24,16 @@ module.exports = {
     node: true,
   },
   extends: [
+    ...[hasPackage('flow-bin') ? ['plugin:flowtype/recommended'] : []],
     'plugin:jsx-a11y/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
-    ...[hasPackage('flow-bin') ? ['plugin:flowtype/recommended'] : []],
   ],
   plugins: [
+    ...[hasPackage('flow-bin') ? ['flowtype'] : []],
     'jsx-a11y',
     'import',
     'react',
-    ...[hasPackage('flow-bin') ? ['flowtype'] : []],
   ],
   rules: {
     ...styleRules,
