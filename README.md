@@ -10,6 +10,13 @@
 * Brief
 * Easy
 
+## Uses
+* `eslint` -> For syntax and code issues, as well as some stylistic linting
+* `prettier` -> For good defaults on styling
+* `prettier-eslint`, `prettier-eslint-cli` -> For when we want to overwrite prettier
+* `husky` -> Manage githooks
+* `lint-staged` -> Use with husky for automatic linting on git commit
+
 ## Notes
 * If something should never be in your code, it is an error, regardless of the severity of the issue.
 * If something probably shouldn't be in your code, but might just require extra oversight from the programmer, the rule should produce a warning. The programmer should then insert a comment to remove the error, or adjust the code accordingly. https://eslint.org/docs/user-guide/configuring#using-configuration-comments
@@ -38,6 +45,9 @@
   ```
 * eslint is for js linting, prettier is for formatting. Make sure you setup both.
 * Setup your editor as necesary: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint, https://github.com/w0rp/ale
+
+### Flow
+* If you have flow installed, you will also need to run `yarn add --dev eslint-plugin-flowtype`. This package will take care of the rest of flow-related linting for you.
 
 ## Updating
 1. Make appropriate changes in repo

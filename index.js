@@ -1,6 +1,16 @@
 /* eslint quote-props: 0 */
 import styleRules from './styleRules';
 
+function hasPackage(name) {
+  try {
+    require.resolve(name);
+    return true;
+  } catch (err) {
+    void err;
+    return false;
+  }
+}
+
 module.exports = {
   parserOptions: {
     ecmaVersion: 2018,
@@ -13,11 +23,13 @@ module.exports = {
     node: true,
   },
   extends: [
+    ...[hasPackage('flow-bin') ? ['plugin:flowtype/recommended'] : []],
     'plugin:jsx-a11y/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
   ],
   plugins: [
+    ...[hasPackage('flow-bin') ? ['flowtype'] : []],
     'jsx-a11y',
     'import',
   ],
@@ -857,9 +869,10 @@ module.exports = {
      * https://eslint.org/docs/rules/no-void
      *
      * Void is unclear. ES5+ solves some of the problems it
-     * solved
+     * solved. However, void is sometimes useful in ignoring
+     * side effects of the expression it voids.
      */
-    'no-void': 2,
+    'no-void': 1,
 
     /**
      * Disallow TODO, FIXME etc
