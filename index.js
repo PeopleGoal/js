@@ -373,7 +373,7 @@ module.exports = {
       *
       * I [heart] parsimony
       */
-    'complexity': ['error', { 'max': 10 }]
+    'complexity': ['error', { 'max': 10 }],
 
     /**
       * Functions must always return a value, or never
