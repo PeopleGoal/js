@@ -1,5 +1,5 @@
 {
-  "name": "@evermind/eslint-config-base",
+  "name": "eslint-config-evermind",
   "version": "1.0.0",
   "description": "Base eslint rules that we use at Evermind Digital",
   "main": "index.js",
@@ -26,7 +26,8 @@
   },
   "homepage": "https://github.com/Evermind-Digital/js#readme",
   "dependencies": {
-    "eslint-plugin-import": "^2.14.0"
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2"
   },
   "peerDependencies": {
     "eslint": ">= 3"
