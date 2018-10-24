@@ -13,6 +13,7 @@ function hasPackage(name) {
 
 module.exports = {
   parserOptions: {
+    sourceType: 'module',
     ecmaVersion: 2018,
     ecmaFeatures: {
       jsx: true,
