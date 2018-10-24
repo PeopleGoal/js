@@ -13,7 +13,8 @@
 ## Notes
 * If something should never be in your code, it is an error, regardless of the severity of the issue.
 * If something probably shouldn't be in your code, but might just require extra oversight from the programmer, the rule should produce a warning. The programmer should then insert a comment to remove the error, or adjust the code accordingly. https://eslint.org/docs/user-guide/configuring#using-configuration-comments
-* You should add rules here where possible, not projects.
+* You should add rules here where possible, not in individual projects.
+* You might also want to check out [stylelint](https://stylelint.io/) for CSS linting.
 
 ## Usage
 * You should extend this in your `eslintrc.js`.
