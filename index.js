@@ -1,5 +1,5 @@
 /* eslint quote-props: 0 */
-import styleRules from './styleRules';
+const styleRules = require('./styleRules');
 
 function hasPackage(name) {
   try {
