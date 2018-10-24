@@ -41,5 +41,6 @@
 
 ## Updating
 1. Make appropriate changes in repo
+  - Ensure stylistic changes (i.e. overwrites of Prettier) go in `styleRules.js`.
 2. `npm version <update_type>` (where update type is one of `patch`, `minor`, or `major`)
 3. `npm publish --access public`
