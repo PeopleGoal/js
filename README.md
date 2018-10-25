@@ -44,15 +44,15 @@
   ```javascript
   "husky": {
     "hooks": {
-      "precommit": "lint-staged"
-    },
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     // note that lint-staged chooses the path for linting for you
     "*.{js,jsx}": [
       "node_modules/.bin/prettier-eslint --write --print-width 70 --tab-width 2 --trailing-comma es5 --bracket-spacing --semi --single-quote", 
       "git add"
-    ],
+    ]
   },
   "scripts": {
     "eslint": "./node_modules/.bin/eslint ./src",
