@@ -1267,18 +1267,11 @@ module.exports = {
      * Sorts imports alphabetically
      * https://eslint.org/docs/rules/sort-imports
      *
-     * Makes finding modules easier. Consistency.
+     * This is a good idea, but grouping by none, single,
+     * multiple is counter-intuitive. Should sort by
+     * functionality, not number of imports.
      */
-    'sort-imports': ['error', {
-      'ignoreCase': true,
-      'ignoreMemberSort': false, // sort within individual imports
-      'memberSyntaxSortOrder': [
-        'none',
-        'all',
-        'single',
-        'multiple',
-      ],
-    }],
+    'sort-imports': 0,
 
     /**
      * Require a description to be passed to Symbol()
