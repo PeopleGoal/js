@@ -1,6 +1,6 @@
 # js
 * This is the base set of eslint rules (and, consequently, style) for JavaScript at Evermind.
-* Inspired by the many great style-guide out there, but particularly [Zeit's](https://github.com/zeit/eslint-config-base) and [Airbnb's](https://github.com/airbnb/javascript).
+* Inspired by the many great style-guides out there, but particularly [Zeit's](https://github.com/zeit/eslint-config-base) and [Airbnb's](https://github.com/airbnb/javascript).
 
 ## Principles (in priority order)
 * Safe
