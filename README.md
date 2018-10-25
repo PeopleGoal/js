@@ -38,14 +38,30 @@
   * See https://eslint.org/docs/developer-guide/shareable-configs for details.
 * Add the following to your package.json scripts (adjusting for the appropriate src folder accordingly):
   ```javascript
+  "husky": {
+    "hooks": {
+      "precommit": "lint-staged"
+    },
+  },
+  "lint-staged": {
+    // note that lint-staged chooses the path for linting for you
+    "*.{js,jsx}": [
+      "node_modules/.bin/prettier-eslint --write --print-width 70 --tab-width 2 --trailing-comma es5 --bracket-spacing --semi --single-quote", 
+      "git add"
+    ],
+  },
   "scripts": {
-    "eslint": "./node_modules/.bin/eslint ./src"
+    "eslint": "./node_modules/.bin/eslint ./src",
     "lint": "node_modules/.bin/prettier-eslint --write --print-width 70 --tab-width 2 --trailing-comma es5 --bracket-spacing --semi --single-quote \"src/**/*.{js,jsx}\""
 
   }
   ```
 * eslint is for js linting, prettier is for formatting. Make sure you setup both.
 * Setup your editor as necesary: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint, https://github.com/w0rp/ale
+
+### Git Hooks
+* This packagage assumes you are using githooks to run linting (hence the fact that `husky` and `elint-staged` are dependencies, although they do not technically need to be implemented).
+* If you add to your package.json as specified above, you'll have automatic linting taken care of for you on each commit, for the files you are commiting only.
 
 ### Flow
 * If you have flow installed, you will also need to run `yarn add --dev eslint-plugin-flowtype`.
@@ -60,6 +76,7 @@
     ],
   }
   ```
+* You may also want to add some githooks for extra flow checking by adding `flow --write` to lint-staged in your `package.json`.
 ### React
 * If you are using react, you will also need to run `yarn add --dev eslint-plugin-react`
 * Then add the following to your `.eslnitrc.js`:
