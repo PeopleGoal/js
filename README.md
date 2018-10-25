@@ -29,6 +29,10 @@
 
 ## Usage
 * Make sure you have eslint installed and initialised: `npm --save-dev i eslint`
+* Install with yarn (or npm)
+  ```
+  yarn add --dev @evermind/eslint-config-base
+  ```
 * You should extend this in your `eslintrc.js`.
   ```javascript
   {
