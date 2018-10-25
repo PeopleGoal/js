@@ -18,6 +18,7 @@
 * [`lint-staged`](https://github.com/okonet/lint-staged) -> Use with husky for automatic linting on git commit
 
 ## Notes
+* This is a work in progress and should be thought of as organic, rather than static. It is as much a tool to decide what the style should be as it is an enforcement and declaration of that style.
 * If something should never be in your code, it is an error, regardless of the severity of the issue.
 * If something probably shouldn't be in your code, but might just require extra oversight from the programmer, the rule should produce a warning. The programmer should then insert a comment to remove the error, or adjust the code accordingly. See the [eslint docs](https://eslint.org/docs/user-guide/configuring#using-configuration-comments) for details.
 * You should add rules here where possible, not in individual projects.
