@@ -377,7 +377,16 @@ module.exports = {
      *
      * Make it static if you get this error.
      */
-    'class-methods-use-this': 2,
+    'class-methods-use-this': ['error', {
+      'exceptMethods': [
+        'render',
+        'componentDidMount',
+        'shouldComponentUpdate',
+        'componentDidUpdate',
+        'componentWillUnmount',
+        'componentDidCatch',
+      ],
+    }],
 
     /**
      * Prevents overly complex branching
