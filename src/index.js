@@ -655,7 +655,7 @@ module.exports = {
      *
      * Explicit is better than implicit
      */
-    'no-magic-numbers': 2,
+    'no-magic-numbers': ['error', { 'ignore': [0] }],
 
     /**
      * Disallow multiple spaces
