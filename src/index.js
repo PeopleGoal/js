@@ -21,7 +21,6 @@ module.exports = {
   plugins: [
     'jsx-a11y',
     'import',
-    'react',
   ],
   rules: {
     ...styleRules,
@@ -1273,7 +1272,12 @@ module.exports = {
     'sort-imports': ['error', {
       'ignoreCase': true,
       'ignoreMemberSort': false, // sort within individual imports
-      'memberSyntaxSortOrder': ['none', 'all', 'single', 'multiple'],
+      'memberSyntaxSortOrder': [
+        'none',
+        'all',
+        'single',
+        'multiple',
+      ],
     }],
 
     /**
@@ -1300,18 +1304,17 @@ module.exports = {
      */
     'yield-star-spacing': ['error', 'both'],
 
-    // TODO add import rules
-    // https://www.npmjs.com/package/eslint-plugin-import
+    /* ====================================================
+     * IMPORTS
+     * ====================================================
+     *
+     * https://www.npmjs.com/package/eslint-plugin-import
+     */
+
     /**
      * You _should_ follow this convention, but you're
      * often in the middle of building things.
      */
     // 'import/prefer-default-export': 1,
   },
-  // TODO add react rules
-  // TODO add plugin-promise rules
-  // TODO add plugin-lodash rules
-  // TODO add plugin-filenames
-  // TODO add eslint-plugin-comments
-  // TODO MobX?
 };
