@@ -623,8 +623,11 @@ module.exports = {
      *
      * It's useful to be warned about where you might be
      * using this incorrectly.
+     *
+     * It's giving false positives so disabled for now
+     * but this is a good feature to have. See issue #16.
      */
-    'no-invalid-this': 1,
+    'no-invalid-this': 0,
 
     /**
      * Disallow iterator
