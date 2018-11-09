@@ -21,6 +21,7 @@ module.exports = {
   plugins: [
     'jsx-a11y',
     'import',
+    'extra-rules',
   ],
   rules: {
     ...styleRules,
@@ -623,8 +624,11 @@ module.exports = {
      *
      * It's useful to be warned about where you might be
      * using this incorrectly.
+     *
+     * It's giving false positives so disabled for now
+     * but this is a good feature to have. See issue #16.
      */
-    'no-invalid-this': 1,
+    'no-invalid-this': 0,
 
     /**
      * Disallow iterator
@@ -1318,5 +1322,32 @@ module.exports = {
      * often in the middle of building things.
      */
     // 'import/prefer-default-export': 1,
+
+    /* ====================================================
+     * EXTRA RULES
+     * ====================================================
+     *
+     * https://github.com/bahmutov/eslint-rules
+     */
+
+    /**
+     * Bad if you meant to add the code, OK if it's there
+     * as explcit explanation.
+     */
+    'extra-rules/no-commented-out-code': 1,
+
+    /**
+     * A gentle nudge to keep your files small(er)
+     */
+    'extra-rules/no-long-files': [1, 200],
+
+    /**
+     * Require point-free code where possible.
+     *
+     * Point free is cleaner. However, sometimes non-point
+     * free is more explicit.
+     */
+    'extra-rules/potential-point-free': 1,
+
   },
 };

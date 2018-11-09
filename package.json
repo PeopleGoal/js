@@ -1,6 +1,6 @@
 {
   "name": "@evermind/eslint-config-base",
-  "version": "1.7.1",
+  "version": "1.9.0",
   "description": "Base eslint rules that we use at Evermind Digital",
   "main": "./lib/index.js",
   "module": "./src/index.js",
@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/Evermind-Digital/js#readme",
   "dependencies": {
+    "eslint-plugin-extra-rules": "0.0.0-development",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "husky": "^1.1.2",
