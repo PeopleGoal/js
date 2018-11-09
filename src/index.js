@@ -1349,5 +1349,19 @@ module.exports = {
      */
     'extra-rules/potential-point-free': 1,
 
+    /* ====================================================
+     * BABEL
+     * ====================================================
+     *
+     * https://github.com/babel/eslint-plugin-babel
+     */
+
+    /**
+     * Fixes broken this issue in arrow functions
+     * https://medium.com/@chestozo/fixing-eslint-no-invalid-this-error-for-fat-arrow-class-methods-a56908ca8bb6
+     *
+     * See no-invalid-this
+     */
+    'babel/no-invalid-this': 1,
   },
 };
