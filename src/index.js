@@ -22,6 +22,7 @@ module.exports = {
     'jsx-a11y',
     'import',
     'extra-rules',
+    'babel',
   ],
   rules: {
     ...styleRules,
