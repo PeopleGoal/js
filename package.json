@@ -1,6 +1,6 @@
 {
   "name": "@evermind/eslint-config-base",
-  "version": "1.11.2",
+  "version": "1.11.3",
   "description": "Base eslint rules that we use at Evermind Digital",
   "main": "./lib/index.js",
   "module": "./src/index.js",
