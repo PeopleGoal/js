@@ -1340,7 +1340,7 @@ module.exports = {
     /**
      * A gentle nudge to keep your files small(er)
      */
-    'extra-rules/no-long-files': [1, 200],
+    'extra-rules/no-long-files': [1, 320],
 
     /**
      * Require point-free code where possible.
