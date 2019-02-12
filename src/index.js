@@ -998,9 +998,10 @@ module.exports = {
      * name as variables in outer block.
      * https://eslint.org/docs/rules/no-shadow
      *
-     * Obvs bad. 2 things with the same name is confusing
+     * Watch out for this, especially when mapping,
+     * filtering etc.
     */
-    'no-shadow': 2,
+    'no-shadow': 1,
 
     /**
      * Disallow certain variable names that are already in
