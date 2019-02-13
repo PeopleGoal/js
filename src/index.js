@@ -1055,8 +1055,17 @@ module.exports = {
      * https://eslint.org/docs/rules/no-unused-vars
      *
      * vars are bad. Unused vars are worse.
+     *
+     * "ignoreRestSiblings" lets you pluck off unwanted
+     * properties e.g.:
+     *
+     * ```
+     * persons.map(({ name, ...namelessPerson }) =>
+     *  namelessPerson
+     * );
+     * ```
      */
-    'no-unused-vars': 2,
+    'no-unused-vars': [2, { "ignoreRestSiblings": true } ],
 
     /**
      * Disallows use of vars and funcs before definition
