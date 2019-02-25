@@ -35,9 +35,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "husky": "^1.1.2",
-    "lint-staged": "^7.3.0",
-    "prettier-eslint": "^8.8.2",
-    "prettier-eslint-cli": "^4.7.1"
+    "lint-staged": "^7.3.0"
   },
   "peerDependencies": {
     "eslint": ">= 3"
