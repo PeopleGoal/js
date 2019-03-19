@@ -115,5 +115,27 @@ module.exports = {
 	'spaced-comment': ['error', 'always', { 'exceptions': ['-', '='] }],
 	'switch-colon-spacing': ['error', {'after': true, 'before': false}],
 	'template-tag-spacing': ['error', 'never'],
-	// TODO ECMAScript 6 rules https://eslint.org/docs/rules/#ecmascript-6
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
