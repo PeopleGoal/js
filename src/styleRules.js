@@ -58,7 +58,7 @@ module.exports = {
 		'ignoreStrings': false,
 		'ignoreTemplateLiterals': false,
 		'ignoreRegExpLiterals': true,
-    'ignorePattern': '^(import\\s(\\{\\s)?.+(\\s\\})?\\sfrom\\s[\'"].*[\'"]|(var|const|let).+require\\([\'"].*[\'"]\));?',
+    'ignorePattern': '^(import\\s(\\{\\s)?.+(\\s\\})?\\sfrom\\s[\'"].*[\'"]|(var|const|let).+require\\([\'"].*[\'"]\\));?',
 	}],
 	'max-lines': ['warn', 500],
 	'max-lines-per-function': ['error', {
