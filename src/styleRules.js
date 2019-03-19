@@ -39,7 +39,6 @@ module.exports = {
 	'keyword-spacing': ['error', { 'before': true, after: true }],
 	'lines-around-comment': ['error', {
 		'beforeBlockComment': true,
-		'afterBlockComment': true,
 		'allowBlockStart': true,
 		'allowBlockEnd': true,
 		'allowClassStart': true,
