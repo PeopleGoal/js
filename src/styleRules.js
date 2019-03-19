@@ -116,26 +116,3 @@ module.exports = {
 	'switch-colon-spacing': ['error', {'after': true, 'before': false}],
 	'template-tag-spacing': ['error', 'never'],
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
