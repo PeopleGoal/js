@@ -15,7 +15,7 @@ module.exports = {
 	'comma-style': ['error', 'last'],
 	'computed-property-spacing': ['error', 'never'],
 	'consistent-this': ['warn', 'that'],
-	'eol-last': ['error', 'never'],
+	'eol-last': ['error', 'always'],
 	'func-call-spacing': ['error', 'never'],
 	'func-name-matching': ['warn', 'always'],
 	'func-names': ['error', 'as-needed'],
