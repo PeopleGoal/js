@@ -23,7 +23,7 @@ module.exports = {
 	'function-paren-newline': ['error', 'consistent'],
 	'indent': ['error', 2, {
 		'SwitchCase': 1,
-		'VariableDeclarator': 'first',
+		'VariableDeclarator': { "var": 2, "let": 2, "const": 3 },
 		'MemberExpression': 1,
 		'FunctionDeclaration': { 'body': 1, 'parameters': 1 },
 		'FunctionExpression': { 'body': 1, 'parameters': 1 },
