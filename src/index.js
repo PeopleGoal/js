@@ -1381,5 +1381,31 @@ module.exports = {
      * See no-invalid-this
      */
     'babel/no-invalid-this': 1,
+
+    /* ====================================================
+     * JSX-A11Y
+     * ====================================================
+     *
+     * https://github.com/evcohen/eslint-plugin-jsx-a11y
+     */
+
+    /**
+     * Show errors when non-accessible labels are used
+     * https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/label-has-for.md
+     *
+     * Disabled as this is deprecated in favour of
+     * label-has-associated control
+     *
+     * See also: label-has-associated-control
+     */
+    'jsx-a11y/label-has-for': 0,
+
+    /**
+     * Show errors when non-accessible labels are used
+     * https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/label-has-associated-control.md
+     *
+     * See also: label-has-for
+     */
+    'jsx-a11y/label-has-associated-control': 2,
   },
 };
