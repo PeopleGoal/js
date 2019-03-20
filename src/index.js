@@ -1355,11 +1355,6 @@ module.exports = {
     'extra-rules/no-commented-out-code': 1,
 
     /**
-     * A gentle nudge to keep your files small(er)
-     */
-    'extra-rules/no-long-files': [1, 320],
-
-    /**
      * Require point-free code where possible.
      *
      * Point free is cleaner. However, sometimes non-point
