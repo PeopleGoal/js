@@ -61,7 +61,7 @@ module.exports = {
 	}],
 	'max-lines': ['warn', 500],
   // Ideally, we'd be ok with long-ish arrow function components, but not with long methods/general functions
-	'max-lines-per-function': ['error', {
+	'max-lines-per-function': ['warn', {
 		'max': 85,
 		'skipBlankLines': true,
 		'skipComments': true,
