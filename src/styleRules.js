@@ -80,7 +80,7 @@ module.exports = {
 	'no-mixed-spaces-and-tabs': 'error',
 	'no-multiple-empty-lines': ['error', { 'max': 1 }],
 	'no-new-object': 'error',
-	'no-restricted-syntax': ['error', 'WithStatement', "BinaryExpression[operator='in']"],
+	'no-restricted-syntax': ['error', 'WithStatement'],
 	'no-tabs': 'error',
 	'no-trailing-spaces': 'error',
 	'no-unneeded-ternary': 'error',
