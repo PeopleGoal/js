@@ -55,7 +55,7 @@ module.exports = {
 		'ignoreTrailingComments': true,
 		'ignoreUrls': true,
 		'ignoreStrings': false,
-		'ignoreTemplateLiterals': false,
+		'ignoreTemplateLiterals': true,
 		'ignoreRegExpLiterals': true,
     'ignorePattern': '^(import\\s(\\{\\s)?.+(\\s\\})?\\sfrom\\s[\'"].*[\'"]|(var|const|let).+require\\([\'"].*[\'"]\\));?',
 	}],
