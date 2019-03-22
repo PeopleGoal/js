@@ -50,7 +50,7 @@ module.exports = {
 	}],
 	'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
 	'max-depth': ['error', 4],
-	'max-len': ['error', {
+	'max-len': ['warn', {
 		'code': 75,
 		'ignoreTrailingComments': true,
 		'ignoreUrls': true,
