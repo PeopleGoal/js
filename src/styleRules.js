@@ -67,7 +67,7 @@ module.exports = {
 		'skipComments': true,
 	}],
 	'max-nested-callbacks': ['warn', 5],
-	'max-params': ['error', 3],
+	'max-params': ['error', 4],
 	'max-statements-per-line': ['error', { 'max': 2 }],
 	'multiline-comment-style': ['error', 'bare-block'],
 	'new-cap': 'error',
