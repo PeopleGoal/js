@@ -30,8 +30,12 @@ module.exports = {
 		'ArrayExpression': 1,
 		'ObjectExpression': 1,
 		'ImportDeclaration': 1,
-    // exclude ternaries from indent rules
-    'ignoredNodes': [ 'ConditionalExpression', 'LogicalExpression' ],
+    // exclude ternaries, ||, && etc from indent rules
+    'ignoredNodes': [
+      'ConditionalExpression',
+      'LogicalExpression *',
+      'ConditionalExpression *',
+    ],
 		'ignoreComments': true,
 	}],
   'jsx-quotes': ['error', 'prefer-single'],
