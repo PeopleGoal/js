@@ -68,7 +68,6 @@ module.exports = {
 	'max-nested-callbacks': ['warn', 5],
 	'max-params': ['error', 4],
 	'max-statements-per-line': ['error', { 'max': 2 }],
-	'multiline-comment-style': ['warn', 'starred-block'],
 	'new-cap': 'error',
 	'new-parens': 'error',
 	'newline-per-chained-call': ['error', { 'ignoreChainWithDepth': 2 }],
