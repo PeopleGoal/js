@@ -30,7 +30,8 @@ module.exports = {
 		'ArrayExpression': 1,
 		'ObjectExpression': 1,
 		'ImportDeclaration': 1,
-		'flatTernaryExpressions': true,
+    // exclude ternaries from indent rules
+    'ignoredNodes': [ 'ConditionalExpression', 'LogicalExpression' ],
 		'ignoreComments': true,
 	}],
   'jsx-quotes': ['error', 'prefer-single'],
