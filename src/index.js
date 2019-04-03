@@ -178,13 +178,21 @@ module.exports = {
      *
      * Extra parents are generally a bad idea, however, they often
      * help make things more explicit (hence the rules below).
+     *
+     * Unfortunately, there is a bug with flow that means
+     * we have to turn this off to allow type casting
+     * https://github.com/gajus/eslint-plugin-flowtype/issues/181
      */
-    'no-extra-parens': ['error', 'all', {
+    'no-extra-parens': 0,
+
+    /* Options we _would_ like to have without the flow bug
+    ['error', 'all', {
       returnAssign: false,
       nestedBinaryExpressions: false,
       ignoreJSX: 'multi-line',
       enforceForArrowConditionals: false,
     }],
+    */
 
     /**
      * Disallow extra semi-colons
