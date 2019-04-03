@@ -168,11 +168,9 @@ module.exports = {
      * https://eslint.org/docs/rules/no-extra-boolean-cast
      *
      * Some casting is useful for making the fact that something is
-     * being used as a boolean explicit. However, other cases should
-     * cause warnings as they are unecessary in certain contexts e.g.
-     * in if statements.
+     * being used as a boolean explicit.
      */
-    'no-extra-boolean-cast': 1,
+    'no-extra-boolean-cast': 0,
 
     /**
      * Disallow extra parentheses
