@@ -898,7 +898,7 @@ module.exports = {
      * Don't forget these! Make some issues in github like
      * a good developer.
      */
-    'no-warning-comments': 1,
+    'no-warning-comments': 2,
 
     /**
      * Disallow `with`
